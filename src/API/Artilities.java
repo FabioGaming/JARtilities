@@ -69,7 +69,7 @@ public class Artilities {
             JSONObject responseJson = (JSONObject) obj;
             JSONArray dictEntry = (JSONArray) responseJson.get("query_results");
             JSONObject dictObj = (JSONObject) dictEntry.get(0);
-            
+
 
             returnMap.put("WebResponseCode", String.valueOf(response.getResponseCode()));
             returnMap.put("executionTime", String.valueOf(responseJson.get("execution_time")));
