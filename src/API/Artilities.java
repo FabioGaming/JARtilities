@@ -47,7 +47,7 @@ public class Artilities {
             returnMap.put("russian", String.valueOf(ideaOutput.get("ru")));
             returnMap.put("raw", responseOutput);
         }catch(Exception e) {
-            returnMap.put("raw", String.valueOf(e));
+            returnMap = null;
         }
         return returnMap;
     }
@@ -83,7 +83,7 @@ public class Artilities {
             returnMap.put("english", String.valueOf(challengeOutput.get("eng")));
             returnMap.put("raw", String.valueOf(responseOutput));
         }catch(Exception e) {
-            returnMap.put("raw", String.valueOf(e));
+            returnMap = null;
         }
         return returnMap;
     }
@@ -131,7 +131,7 @@ public class Artilities {
             returnMap.put("raw", responseOutput);
 
         } catch(Exception e) {
-            returnMap.put("raw", String.valueOf(e));
+            returnMap = null;
         }
 
         return returnMap;
@@ -169,7 +169,7 @@ public class Artilities {
                 returnMap.put("bannerImage", String.valueOf(JsonContent.get("banner_image")));
                 returnMap.put("language", String.valueOf(JsonContent.get("language")));
             }catch(Exception e) {
-                returnMap.put("raw", String.valueOf(e));
+                returnMap = null;
             }
             return returnMap;
         }
