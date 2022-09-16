@@ -15,7 +15,7 @@ import java.util.HashMap;
 @SuppressWarnings("DuplicatedCode")
 public class Artilities {
     //Sets the API link so it only needs to be written once
-    private static String APILink = "https://artilities.herokuapp.com/api/";
+    private static String APILink = "https://artilities-web-api.vercel.app/api/";
 
     //Handles the GetIdea Logic of JARtilities
     //Will return a HashMap with 2 strings which can hold the keys: "WebResponseCode", "executionTime", "statusCode", "english", "russian", "raw"
