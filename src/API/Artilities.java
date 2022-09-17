@@ -15,14 +15,14 @@ import java.util.HashMap;
 @SuppressWarnings("DuplicatedCode")
 public class Artilities {
     //Sets the API link so it only needs to be written once
-    private static String APILink = "https://artilities-web-api.vercel.app/api/";
+    //private static String APILink = "https://artilities-web-api.vercel.app/api/";
 
     //Handles the GetIdea Logic of JARtilities
     //Will return a HashMap with 2 strings which can hold the keys: "WebResponseCode", "executionTime", "statusCode", "english", "russian", "raw"
     public static HashMap<String,String> getIdea() {
         HashMap<String,String> returnMap = new HashMap<String,String>();
         try {
-            URL url = new URL(APILink + "ideas");
+            URL url = new URL("https://artilities-web-api.vercel.app/api/ideas");
             HttpURLConnection response = (HttpURLConnection)url.openConnection();
             response.setRequestProperty("Accept", "application/json");
             response.setRequestMethod("GET");
@@ -34,6 +34,9 @@ public class Artilities {
                     textBuilder.append((char) c);
                 }
             response.disconnect();
+
+
+
             String responseOutput = textBuilder.toString();
 
             JSONParser parser = new JSONParser();
@@ -57,7 +60,7 @@ public class Artilities {
     public static HashMap<String,String> getChallenge() {
         HashMap<String,String> returnMap = new HashMap<String,String>();
         try {
-            URL url = new URL(APILink + "challenges");
+            URL url = new URL("https://artilities-web-api.vercel.app/api/challenges");
             HttpURLConnection response = (HttpURLConnection)url.openConnection();
             response.setRequestProperty("Accept", "application/json");
             response.setRequestMethod("GET");
@@ -95,7 +98,7 @@ public class Artilities {
         HashMap<String,String> returnMap = new HashMap<String,String>();
         String searchQuery = query.replace(" ", "%20").toLowerCase();
         try {
-            URL url = new URL(APILink + "dict" + "?query=" + searchQuery);
+            URL url = new URL("https://artilities-web-api.vercel.app/api/dict" + "?query=" + searchQuery);
             HttpURLConnection response = (HttpURLConnection)url.openConnection();
             response.setRequestProperty("Accept", "application/json");
             response.setRequestMethod("GET");
@@ -143,7 +146,7 @@ public class Artilities {
         public static HashMap<String, String> getBanners() {
             HashMap<String,String> returnMap = new HashMap<String,String>();
             try {
-                URL url = new URL(APILink + "other/banners");
+                URL url = new URL("https://artilities-web-api.vercel.app/api/other/banners");
                 HttpURLConnection response = (HttpURLConnection)url.openConnection();
                 response.setRequestProperty("Accept", "application/json");
                 response.setRequestMethod("GET");
