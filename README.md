@@ -21,8 +21,8 @@ You can grab the latest release from this github page!
 # DOCUMENTATION
 ### Getting an Idea
 You can get a random Idea from the Artilities Database using the `getIdea()` function, this function will return a HashMap with the following keys: `english`, `executionTime`, `statusCode`, `russian`, `raw`, `WebResponseCode`.
-- `eng` - Will return a random Idea in english
-- `ru` - Will return a random Idea in russian
+- `english` - Will return a random Idea in english
+- `russian` - Will return a random Idea in russian
 - `executionTime` - Will return the amount of time it took the server to respond (in ms).
 - `statusCode` - Will return the Servers response code (in best case `200`).
 - `WebResponseCode` - Will return the response code of the request itself (in best case it matches `statusCode`)
@@ -35,8 +35,8 @@ You can get a random Idea from the Artilities Database using the `getIdea()` fun
         HashMap<String,String> testMap = Artilities.getIdea();
         if(testMap != null) {
 
-            System.out.println("Your Idea: " + testMap.get("eng"));
-            System.out.println("Russian: " + testMap.get("ru"));
+            System.out.println("Your Idea: " + testMap.get("english"));
+            System.out.println("Russian: " + testMap.get("russian"));
             System.out.println("Server Response " + testMap.get("statusCode"));
             System.out.println("Server Response Time: " + testMap.get("executionTime") + "ms");
             System.out.println("Raw JSON: " + testMap.get("raw"));
@@ -55,8 +55,8 @@ Raw JSON: {"status_code":200,"generated_idea":{"ru":"Бог азартных и�
 
 ### Getting a challenge
 You can get a random Challenge from Artilities Database using the `getChallenge()` function, this function will return a HashMap with the following keys: `english`, `executionTime`, `statusCode`, `russian`, `raw`, `WebResponseCode`.
-- `eng` - Will return a random Idea in english
-- `ru` - Will return a random Idea in russian
+- `english` - Will return a random Idea in english
+- `russian` - Will return a random Idea in russian
 - `executionTime` - Will return the amount of time it took the server to respond (in ms).
 - `statusCode` - Will return the Servers response code (in best case `200`).
 - `WebResponseCode` - Will return the response code of the request itself (in best case it matches `statusCode`)
@@ -69,8 +69,8 @@ You can get a random Challenge from Artilities Database using the `getChallenge(
         HashMap<String,String> testMap = Artilities.getChallenge();
         if(testMap != null) {
 
-            System.out.println("Your Challenge: " + testMap.get("eng"));
-            System.out.println("Russian: " + testMap.get("ru"));
+            System.out.println("Your Challenge: " + testMap.get("english"));
+            System.out.println("Russian: " + testMap.get("russian"));
             System.out.println("Server Response " + testMap.get("statusCode"));
             System.out.println("Server Response Time: " + testMap.get("executionTime") + "ms");
             System.out.println("Raw JSON: " + testMap.get("raw"));
